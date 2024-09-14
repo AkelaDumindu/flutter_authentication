@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app5/pages/main_screen.dart';
+import 'package:flutter_app5/routers/router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'App 5',
       theme: ThemeData(
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      home: MainScreen(),
+      routerConfig: RouterClass().router,
     );
   }
 }
